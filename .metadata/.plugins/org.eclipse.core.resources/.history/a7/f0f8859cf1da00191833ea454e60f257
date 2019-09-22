@@ -1,0 +1,20 @@
+package Sort;
+
+/**
+ * @author kaustavmanna
+ *
+ */
+public class Sorting
+{
+	public static void BubbleSort(int arr[], SortOrder order)
+	{
+		for(int i = 0; i < arr.length; i++)
+		{
+			boolean swapped = true;
+			for(int j = 0; j < arr.length - 1; j++)
+			{
+				
+			}
+		}
+	}
+}
