@@ -200,6 +200,58 @@ public class Sorting
 	/*Quick Sort*/
 	public static void QuickSort(int arr[], SortOrder order)
 	{
+		QuickSort(arr, 0, arr.length - 1, order);
+	}
+	
+	private static void QuickSort(int arr[], int low, int high, SortOrder order)
+	{
+		int pivot;
 		
+		if(low < high)
+		{
+			pivot = partition(arr, low, high, order);
+			QuickSort(arr, low, pivot-1, order);
+			QuickSort(arr, pivot + 1, high, order);
+		}
+	}
+	
+	private static int partition(int arr[], int low, int high, SortOrder order)
+	{
+		int left = low;
+		int right = high;
+		int pivot = high;
+		
+		while(true)
+		{
+			if(order == SortOrder.Ascending)
+			{
+				while(arr[left] < arr[pivot])
+					left++;
+				while(arr[right] > arr[pivot])
+					right--;
+			}
+			else
+			{
+				while(arr[left] > arr[pivot])
+					left++;
+				while(arr[right] < arr[pivot])
+					right--;
+			}
+			
+			if(left >= right)
+				break;
+			else
+			{
+				int temp = arr[left];
+				arr[left] = arr[right];
+				arr[right] = temp;
+			}
+		}
+		
+		int temp = arr[left];
+		arr[left] = arr[pivot];
+		arr[pivot] = temp;
+		
+		return left;
 	}
 }
