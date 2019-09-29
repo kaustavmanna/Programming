@@ -19,23 +19,32 @@ public class SortingImpl
 		}
 		
 		/*Calling Sort Method*/
-		//Sorting.BubbleSort(arr, SortOrder.Ascending);
-		//Sorting.BubbleSort(arr, SortOrder.Descending);
-		//Sorting.SelectionSort(arr, SortOrder.Ascending);
-		//Sorting.SelectionSort(arr, SortOrder.Descending);
-		//Sorting.InsertionSort(arr, SortOrder.Ascending);
-		//Sorting.InsertionSort(arr, SortOrder.Descending);
-		//Sorting.ShellSort(arr, SortOrder.Descending);
-		//Sorting.MergeSort(arr, SortOrder.Ascending);
-		//Sorting.MergeSort(arr, SortOrder.Descending);
-		//Sorting.QuickSort(arr2, SortOrder.Ascending);
-		Sorting.QuickSort(arr2, SortOrder.Descending);
+		//BubbleSort.sort(arr, SortOrder.Ascending);
+		//BubbleSort.sort(arr, SortOrder.Descending);
+		
+		//SelectionSort.sort(arr, SortOrder.Ascending);
+		//SelectionSort.sort(arr, SortOrder.Descending);
+		
+		//InsertionSort.sort(arr, SortOrder.Ascending);
+		//InsertionSort.sort(arr, SortOrder.Descending);
+		
+		//ShellSort.sort(arr, SortOrder.Ascending);
+		//ShellSort.sort(arr, SortOrder.Descending);
+		
+		//MergeSort.sort(arr, SortOrder.Ascending);
+		//MergeSort.sort(arr, SortOrder.Descending);
+		
+		//QuickSort.sort(arr2, SortOrder.Ascending);
+		//QuickSort.sort(arr2, SortOrder.Descending);
+		
+		//int sorted[] = CountingSort.sort(arr2, 1, 100, SortOrder.Ascending);
+		int sorted[] = CountingSort.sort(arr2, 1, 100, SortOrder.Descending);
 		
 		/*Post Sorting Array*/
 		System.out.println("\nAfter sorting the array is: ");
-		for(int i = 0; i < arr2.length; i++)
+		for(int i = 0; i < sorted.length; i++)
 		{
-			System.out.print(arr2[i] + " ");
+			System.out.print(sorted[i] + " ");
 		}
 	}
 }
