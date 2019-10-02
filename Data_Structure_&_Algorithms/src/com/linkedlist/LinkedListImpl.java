@@ -4,18 +4,18 @@ public class LinkedListImpl
 {
 	public static void main(String[] args)
 	{
-		SingleLinkedList<Integer> list1 = new SingleLinkedList<Integer> ();
+		//SingleLinkedList<Integer> list1 = new SingleLinkedList<Integer> ();
 		//DoubleLinkedList list1 = new DoubleLinkedList();
-		list1.insert(10);
-		list1.insert(25);
-		list1.insert(5);
-		list1.insert(1);
-		list1.insert(7);
 		
+		/*Single Linked List Using Array Test*/
+		SingleLinkedListArray list1 = new SingleLinkedListArray();
+		
+		for(int i = 1; i <= 10; i++)
+			list1.insert(i*i);
 		list1.traverse();
-		
-		list1.delete(5);
-		
+		list1.delete(10);
+		list1.traverse();
+		list1.insert(10);
 		list1.traverse();
 	}
 }

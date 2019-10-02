@@ -1,12 +1,10 @@
-/**
- * 
- */
 package com.heap;
 
 /**
  * @author kaustavmanna
  *
  */
-public class Heap {
+public class Heap
+{
 
 }
