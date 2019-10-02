@@ -19,6 +19,7 @@ public class ThreadSafeSingleton
 		{
 			synchronized(ThreadSafeSingleton.class)
 			{
+				/*After getting the lock checking again if the object is created or not*/
 				if(instance == null)
 					instance = new ThreadSafeSingleton();
 			}
