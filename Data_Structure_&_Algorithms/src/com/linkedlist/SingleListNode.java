@@ -2,8 +2,8 @@ package com.linkedlist;
 
 public class SingleListNode<E>
 {
-	E value;
-	SingleListNode<E> next;
+	private E value;
+	private SingleListNode<E> next;
 	
 	public SingleListNode(E value)
 	{

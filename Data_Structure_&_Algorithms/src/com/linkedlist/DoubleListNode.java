@@ -1,39 +1,39 @@
 package com.linkedlist;
 
-public class DoubleListNode
+public class DoubleListNode<E>
 {
-	int value;
-	DoubleListNode previous;
-	DoubleListNode next;
+	E value;
+	DoubleListNode<E> previous;
+	DoubleListNode<E> next;
 	
-	public DoubleListNode(int value)
+	public DoubleListNode(E value)
 	{
 		this.value = value;
 		previous = null;
 		next = null;
 	}
 	
-	public int getData()
+	public E getData()
 	{
 		return this.value;
 	}
 	
-	public DoubleListNode getNext()
+	public DoubleListNode<E> getNext()
 	{
 		return this.next;
 	}
 	
-	public void setNext(DoubleListNode next)
+	public void setNext(DoubleListNode<E> next)
 	{
 		this.next = next;
 	}
 	
-	public DoubleListNode getPrevious()
+	public DoubleListNode<E> getPrevious()
 	{
 		return this.previous;
 	}
 	
-	public void setPrevious(DoubleListNode previous)
+	public void setPrevious(DoubleListNode<E> previous)
 	{
 		this.previous = previous;
 	}
