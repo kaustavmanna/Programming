@@ -9,6 +9,11 @@ public class SingleLinkedList<E>
 		head = null;
 	}
 	
+	public void deletelist()
+	{
+		head = null;
+	}
+	
 	public void traverse()
 	{
 		if(head == null)

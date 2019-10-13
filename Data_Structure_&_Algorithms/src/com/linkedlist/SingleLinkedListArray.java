@@ -28,7 +28,8 @@ public class SingleLinkedListArray
 		}
 	}
 	
-	public void insert(int data)
+	/*Inserting Value At The End*/
+	public void insertNode(int data)
 	{
 		if(listsize == list.length)
 			list = listsizeincrease(list);
@@ -37,6 +38,23 @@ public class SingleLinkedListArray
 		listsize++;
 		
 		System.out.println(data + " inserted in the list successfully!");
+	}
+	
+	/*Inserting value At Mentioned Position*/
+	public void insertPosition(int position, int data)
+	{
+		if(position > listsize)
+			System.out.println("Invalid position mentioned!");
+		else
+		{
+			if(listsize == list.length)
+				list = listsizeincrease(list);
+			
+			for(int i = listsize - 1; i >= position; i--)
+			{
+				
+			}
+		}
 	}
 	
 	public void delete(int data)
