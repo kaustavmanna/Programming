@@ -12,6 +12,7 @@ public class Light
 	public Light(Color color)
 	{
 		this.color = color;
+		this.state = false;
 	}
 	
 	public boolean getState()
@@ -22,10 +23,6 @@ public class Light
 	public void changeState()
 	{
 		state = !state;
-		if(state == true)
-			System.out.println(color + " is on!");
-		else
-			System.out.println(color + " is Off!");
 	}
 	
 	public Color getColor()
