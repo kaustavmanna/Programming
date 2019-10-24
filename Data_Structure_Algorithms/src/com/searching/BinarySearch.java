@@ -6,22 +6,41 @@ package com.searching;
  */
 public class BinarySearch
 {
-	public static boolean binarysearch(int arr[], int element)
+	public static int iterativesearch(int arr[], int element)
 	{
-		return binarysearch(arr, 0, arr.length-1, element);
+		int low = 0;
+		int high = arr.length - 1;
+		
+		while(low <= high)
+		{
+			int mid = (low + high) / 2;
+			
+			if(arr[mid] == element)
+				return mid;
+			else if(arr[mid] > element)
+				high = mid - 1;
+			else
+				low = mid + 1;
+		}
+		return -1;
 	}
 	
-	public static boolean binarysearch(int arr[], int low, int high, int element)
+	public static int recursivesearch(int arr[], int element)
 	{
-		int mid = arr.length / 2;
+		return recursivesearch(arr, 0, arr.length - 1, element);
+	}
+	
+	public static int recursivesearch(int arr[], int low, int high, int element)
+	{
+		int mid = (low + high) / 2;
 		
-		if(arr[low] == element)
-			return true;
+		if(low > high)
+			return -1;
+		else if(arr[mid] == element)
+			return mid;
 		else if(arr[mid] > element)
-			return (binarysearch(arr, low, mid, element));
-		else if(arr[mid] < element)
-			return (binarysearch(arr, mid+1, high, element));
+			return (recursivesearch(arr, low, mid - 1, element));
 		else
-			return false;
+			return (recursivesearch(arr, mid + 1, high, element));
 	}
 }
