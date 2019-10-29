@@ -13,12 +13,17 @@ public class CircularDoubleList<E>
 		head = null;
 	}
 	
+	public void deletelist()
+	{
+		head = null;
+	}
+	
 	public int size()
 	{
 		int count = 0;
 		if(head != null)
 		{
-			DoubleLinkedList<E> N = head;
+			DoubleListNode<E> N = head;
 			count++;
 			while(N.getNext() != head)
 			{
