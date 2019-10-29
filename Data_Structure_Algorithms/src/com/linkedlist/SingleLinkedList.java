@@ -2,7 +2,7 @@ package com.linkedlist;
 
 public class SingleLinkedList<E>
 {
-	SingleListNode<E> head;
+	private SingleListNode<E> head;
 	
 	public SingleLinkedList()
 	{
@@ -14,13 +14,24 @@ public class SingleLinkedList<E>
 		head = null;
 	}
 	
+	public int size()
+	{
+		int count = 0;
+		if(head != null)
+		{
+			for(SingleListNode<E> N = head; N != null; N = N.getNext())
+				count++;
+		}
+		return count;
+	}
+	
 	public void traverse()
 	{
 		if(head == null)
-			System.out.println("The List is Empty.");
+			System.out.println("The List is Empty!");
 		else
 		{
-			System.out.println("Current Linked List is: ");
+			System.out.println("Current List is: ");
 			
 			for(SingleListNode<E> N = head; N != null; N = N.getNext())
 				System.out.print(N.getData() + " ");
@@ -64,13 +75,7 @@ public class SingleLinkedList<E>
 			N = N.getNext();
 		
 		if(N == null)
-		{
-			N = head;
-			while(N.getNext() != null)
-				N = N.getNext();
-			N.setNext(node);
-			System.out.println("Invalid position mentioned. Therefore adding the element at the end of the list!");
-		}
+			System.out.println("Invalid position mentioned!");
 		else
 		{
 			node.setNext(N.getNext());

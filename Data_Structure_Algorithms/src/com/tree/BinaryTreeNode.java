@@ -1,44 +1,44 @@
 package com.tree;
 
-public class BinaryTreeNode
+public class BinaryTreeNode<E>
 {
-	private int data;
-	private BinaryTreeNode left;
-	private BinaryTreeNode right;
+	private E data;
+	private BinaryTreeNode<E> left;
+	private BinaryTreeNode<E> right;
 	
-	public BinaryTreeNode(int data)
+	public BinaryTreeNode(E data)
 	{
 		this.data = data;
 		left = null;
 		right = null;
 	}
 	
-	public int getData()
+	public E getData()
 	{
 		return this.data;
 	}
 	
-	public void setData(int data)
+	public void setData(E data)
 	{
 		this.data = data;
 	}
 	
-	public BinaryTreeNode getLeft()
+	public BinaryTreeNode<E> getLeft()
 	{
 		return this.left;
 	}
 	
-	public BinaryTreeNode getRight()
+	public BinaryTreeNode<E> getRight()
 	{
 		return this.right;
 	}
 
-	public void setLeft(BinaryTreeNode N)
+	public void setLeft(BinaryTreeNode<E> N)
 	{
 		this.left = N;
 	}
 	
-	public void setRight(BinaryTreeNode N)
+	public void setRight(BinaryTreeNode<E> N)
 	{
 		this.right = N;
 	}

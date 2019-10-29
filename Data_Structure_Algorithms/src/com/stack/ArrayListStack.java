@@ -2,7 +2,7 @@ package com.stack;
 
 import java.util.*;
 
-public class ArrayListStack<E>
+public class ArrayListStack<E> implements Stack<E>
 {
 	List<E> stack;
 	
@@ -11,6 +11,13 @@ public class ArrayListStack<E>
 		stack = new ArrayList<E>();
 	}
 	
+	@Override
+	public int size()
+	{
+		return stack.size();
+	}
+	
+	@Override
 	public E peek()
 	{
 		if(stack.size() != 0)
@@ -22,11 +29,13 @@ public class ArrayListStack<E>
 		}
 	}
 	
+	@Override
 	public void push(E node)
 	{
 		stack.add(node);
 	}
 	
+	@Override
 	public E pop()
 	{
 		if(stack.size() != 0)
@@ -42,6 +51,7 @@ public class ArrayListStack<E>
 		}
 	}
 	
+	@Override
 	public boolean isEmpty()
 	{
 		if(stack.size() == 0)

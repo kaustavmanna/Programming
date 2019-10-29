@@ -4,7 +4,7 @@ public class QueueImpl
 {
 	public static void main(String[] args)
 	{
-		LinkedListQueue<Integer> q = new LinkedListQueue<Integer> ();
+		Queue<Integer> q = new Queue<Integer> ();
 		q.enQueue(5);
 		q.enQueue(10);
 		q.enQueue(15);

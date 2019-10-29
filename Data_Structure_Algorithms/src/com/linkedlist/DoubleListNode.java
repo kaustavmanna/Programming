@@ -2,9 +2,9 @@ package com.linkedlist;
 
 public class DoubleListNode<E>
 {
-	E value;
-	DoubleListNode<E> previous;
-	DoubleListNode<E> next;
+	private E value;
+	private DoubleListNode<E> previous;
+	private DoubleListNode<E> next;
 	
 	public DoubleListNode(E value)
 	{

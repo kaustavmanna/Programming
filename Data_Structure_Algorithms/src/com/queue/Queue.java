@@ -2,11 +2,11 @@ package com.queue;
 
 import com.linkedlist.SingleListNode;
 
-public class LinkedListQueue<E>
+public class Queue<E>
 {
 	SingleListNode<E> front, rear;
 	
-	public LinkedListQueue()
+	public Queue()
 	{
 		front = null;
 		rear = null;

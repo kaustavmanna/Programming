@@ -2,7 +2,7 @@ package com.stack;
 
 import com.linkedlist.SingleListNode;
 
-public class LinkedListStack<E>
+public class LinkedListStack<E> implements Stack<E>
 {
 	private SingleListNode<E> stack;
 	private int size;

@@ -2,7 +2,7 @@ package com.linkedlist;
 
 public class DoubleLinkedList<E>
 {
-	DoubleListNode<E> head;
+	private DoubleListNode<E> head;
 
 	public DoubleLinkedList()
 	{
@@ -12,6 +12,17 @@ public class DoubleLinkedList<E>
 	public void deletelist()
 	{
 		head = null;
+	}
+	
+	public int size()
+	{
+		int count = 0;
+		if(head != null)
+		{
+			for(DoubleListNode<E> N = head; N != null; N = N.getNext())
+				count++;
+		}
+		return count;
 	}
 	
 	public void traverse()
