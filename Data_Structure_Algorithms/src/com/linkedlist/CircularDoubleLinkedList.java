@@ -4,11 +4,11 @@ package com.linkedlist;
  * @author kaustavmanna
  *
  */
-public class CircularSingleLinkedList<E>
+public class CircularDoubleLinkedList<E>
 {
-	private SingleListNode<E> head;
+	private DoubleListNode<E> head;
 	
-	public CircularSingleLinkedList()
+	public CircularDoubleLinkedList()
 	{
 		head = null;
 	}
@@ -16,7 +16,6 @@ public class CircularSingleLinkedList<E>
 	public void deletelist()
 	{
 		head = null;
-		System.out.println("The list is deleted!");
 	}
 	
 	public int size()
@@ -24,12 +23,13 @@ public class CircularSingleLinkedList<E>
 		int count = 0;
 		if(head != null)
 		{
-			SingleListNode<E> N = head;
-			count = 1;
+			DoubleListNode<E> N = head;
+			count++;
+			
 			while(N.getNext() != head)
 			{
-				count++;
 				N = N.getNext();
+				count++;
 			}
 		}
 		return count;
@@ -38,36 +38,36 @@ public class CircularSingleLinkedList<E>
 	public void traverse()
 	{
 		if(head == null)
-			System.out.println("List is Empty!");
+			System.out.println("List is empty!");
 		else
 		{
-			System.out.println("Current elements in the list are: ");
-			SingleListNode<E> N = head;
+			System.out.println("Current List is: ");
+			DoubleListNode<E> N = head;
 			do
 			{
 				System.out.print(N.getData() + " ");
 				N = N.getNext();
 			}while(N != head);
-			System.out.println("");
 		}
+		System.out.println();
 	}
 	
 	public void insertNode(E data)
 	{
-		SingleListNode<E> newnode = new SingleListNode<E>(data);
+		DoubleListNode<E> newnode = new DoubleListNode<E> (data);
 		
 		if(head == null)
 		{
 			head = newnode;
 			head.setNext(head);
+			head.setPrevious(head);
 		}
 		else
 		{
-			SingleListNode<E> N = head;
-			while(N.getNext() != head)
-				N = N.getNext();
-			N.setNext(newnode);
+			newnode.setPrevious(head.getPrevious());
 			newnode.setNext(head);
+			head.getPrevious().setNext(newnode);
+			head.setPrevious(newnode);
 		}
 		System.out.println(data + " is added to the list!");
 	}
@@ -75,10 +75,7 @@ public class CircularSingleLinkedList<E>
 	public void deleteNode(E data)
 	{
 		if(head == null)
-		{
 			System.out.println("The list is empty!");
-			return;
-		}
 		
 		else if(head.getNext() == head)
 		{
@@ -93,26 +90,26 @@ public class CircularSingleLinkedList<E>
 		
 		else
 		{
-			SingleListNode<E> curr = head.getNext();
-			SingleListNode<E> prev = head;
+			DoubleListNode<E> curr = head;
 			
-			do
+			while(curr.getNext() != head)
 			{
 				if(curr.getData() == data)
 				{
-					prev.setNext(curr.getNext());
-					curr.setNext(null);
-					
 					if(curr == head)
-						head = prev.getNext();
+						head = curr.getNext();
+					
+					curr.getPrevious().setNext(curr.getNext());
+					curr.getNext().setPrevious(curr.getPrevious());
+					curr.setNext(null);
+					curr.setPrevious(null);
 					
 					System.out.println(data + " is deleted from the list!");
 					return;
 				}
-				prev = curr;
 				curr = curr.getNext();
-			}while(prev != head);
+			}
+			System.out.println(data + " does not exist in the list!");
 		}
-		System.out.println(data + " does not exist in the list!");
 	}
 }
