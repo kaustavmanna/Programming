@@ -1,71 +1,57 @@
+/**
+ * @author kaustavmanna
+ *
+ */
+
 package com.stack;
 
-import com.linkedlist.SingleListNode;
+import java.util.LinkedList;
 
 public class LinkedListStack<E> implements Stack<E>
 {
-	private SingleListNode<E> stack;
-	private int size;
+	private LinkedList<E> stack;
 	
 	public LinkedListStack()
 	{
-		stack = null;
-		size = 0;
+		stack = new LinkedList<E>();
 	}
 	
-	public int size()
-	{
-		return this.size;
-	}
-	
+	@Override
 	public E peek()
 	{
-		if(stack != null)
-			return stack.getData();
-		else
-		{
-			System.out.println("Stack is Empty.");
+		if(stack.isEmpty())
 			return null;
-		}
+		else
+			return stack.getFirst();
 	}
 	
+	@Override
 	public void push(E data)
 	{
-		SingleListNode<E> newnode = new SingleListNode<E> (data);
-		
-		if(stack == null)
-			stack = newnode;
-		else
-		{
-			newnode.setNext(stack);
-			stack = newnode;
-		}
-		
-		size++;
+		stack.addFirst(data);
 	}
 	
+	@Override
 	public E pop()
 	{
-		if(stack!= null)
-		{
-			E data = stack.getData();
-			stack = stack.getNext();
-			size--;
-			return data;
-		}
-		
-		else
-		{
-			System.out.println("Stack is Empty.");
+		if(stack.isEmpty())
 			return null;
-		}
+		else
+			return stack.removeFirst();
 	}
 	
+	@Override
 	public boolean isEmpty()
 	{
-		if(stack == null)
+		if (stack.isEmpty())
 			return true;
 		else
 			return false;
+	}
+	
+	@Override
+	public int size()
+	{
+		return stack.size();
 	}
 }

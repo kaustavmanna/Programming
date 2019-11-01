@@ -1,9 +1,14 @@
+/**
+ * @author kaustavmanna
+ *
+ */
+
 package com.stack;
 
 public class DynamicArrayStack
 {
-	int stack[];
-	int top;
+	private int stack[];
+	private int top;
 	
 	public DynamicArrayStack(int capacity)
 	{

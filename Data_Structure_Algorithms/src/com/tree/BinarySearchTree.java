@@ -1,6 +1,6 @@
 package com.tree;
 
-import com.stack.LinkedListStack;
+import com.stack.ListNodeStack;
 
 public class BinarySearchTree
 {
@@ -146,7 +146,7 @@ public class BinarySearchTree
 	
 	public void nonrecursivepreorder(BinaryTreeNode<Integer> N)
 	{
-		LinkedListStack<BinaryTreeNode<Integer>> stack = new LinkedListStack<BinaryTreeNode<Integer>> ();
+		ListNodeStack<BinaryTreeNode<Integer>> stack = new ListNodeStack<BinaryTreeNode<Integer>> ();
 		stack.push(N);
 		
 		while(!stack.isEmpty())
@@ -162,7 +162,7 @@ public class BinarySearchTree
 	
 	public void nonrecursiveinorder(BinaryTreeNode<Integer> N)
 	{
-		LinkedListStack<BinaryTreeNode<Integer>> stack = new LinkedListStack<BinaryTreeNode<Integer>> ();
+		ListNodeStack<BinaryTreeNode<Integer>> stack = new ListNodeStack<BinaryTreeNode<Integer>> ();
 
 		while(true)
 		{
@@ -188,7 +188,7 @@ public class BinarySearchTree
 		if(N == null)
 			return;
 		
-		LinkedListStack<BinaryTreeNode<Integer>> stack = new LinkedListStack<BinaryTreeNode<Integer>> ();
+		ListNodeStack<BinaryTreeNode<Integer>> stack = new ListNodeStack<BinaryTreeNode<Integer>> ();
 		stack.push(N);
 		BinaryTreeNode<Integer> prev = null;
 		
@@ -237,7 +237,7 @@ public class BinarySearchTree
 	
 	public Integer depthStack(BinaryTreeNode<Integer> N)
 	{
-		LinkedListStack<BinaryTreeNode<Integer>> stack = new LinkedListStack<BinaryTreeNode<Integer>>();
+		ListNodeStack<BinaryTreeNode<Integer>> stack = new ListNodeStack<BinaryTreeNode<Integer>>();
 		BinaryTreeNode<Integer> prev = null;
 		Integer depth = 0;
 		
@@ -271,7 +271,7 @@ public class BinarySearchTree
 	public Integer countLeaveNode(BinaryTreeNode<Integer> N)
 	{
 		Integer count = 0;
-		LinkedListStack<BinaryTreeNode<Integer>> stack = new LinkedListStack<BinaryTreeNode<Integer>> ();
+		ListNodeStack<BinaryTreeNode<Integer>> stack = new ListNodeStack<BinaryTreeNode<Integer>> ();
 		
 		if(N != null)
 			stack.push(N);
@@ -293,7 +293,7 @@ public class BinarySearchTree
 	public Integer countParentNode(BinaryTreeNode<Integer> N)
 	{
 		int count = 0;
-		LinkedListStack<BinaryTreeNode<Integer>> stack = new LinkedListStack<BinaryTreeNode<Integer>> ();
+		ListNodeStack<BinaryTreeNode<Integer>> stack = new ListNodeStack<BinaryTreeNode<Integer>> ();
 		
 		if(N != null)
 			stack.push(N);
@@ -315,7 +315,7 @@ public class BinarySearchTree
 	public static int countHalfNode(BinaryTreeNode<Integer> N)
 	{
 		int count = 0;
-		LinkedListStack<BinaryTreeNode<Integer>> stack = new LinkedListStack<BinaryTreeNode<Integer>> ();
+		ListNodeStack<BinaryTreeNode<Integer>> stack = new ListNodeStack<BinaryTreeNode<Integer>> ();
 		
 		if(N != null)
 			stack.push(N);

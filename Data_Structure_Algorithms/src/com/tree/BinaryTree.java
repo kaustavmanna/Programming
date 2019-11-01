@@ -1,6 +1,6 @@
 package com.tree;
 
-import com.stack.LinkedListStack;
+import com.stack.ListNodeStack;
 
 public class BinaryTree<E>
 {
@@ -136,7 +136,7 @@ public class BinaryTree<E>
 	
 	public void nonrecursivepreorder(BinaryTreeNode<E> N)
 	{
-		LinkedListStack<BinaryTreeNode<E>> stack = new LinkedListStack<BinaryTreeNode<E>> ();
+		ListNodeStack<BinaryTreeNode<E>> stack = new ListNodeStack<BinaryTreeNode<E>> ();
 		stack.push(N);
 		
 		while(!stack.isEmpty())
@@ -152,7 +152,7 @@ public class BinaryTree<E>
 	
 	public void nonrecursiveinorder(BinaryTreeNode<E> N)
 	{
-		LinkedListStack<BinaryTreeNode<E>> stack = new LinkedListStack<BinaryTreeNode<E>> ();
+		ListNodeStack<BinaryTreeNode<E>> stack = new ListNodeStack<BinaryTreeNode<E>> ();
 
 		while(true)
 		{
@@ -178,7 +178,7 @@ public class BinaryTree<E>
 		if(N == null)
 			return;
 		
-		LinkedListStack<BinaryTreeNode<E>> stack = new LinkedListStack<BinaryTreeNode<E>> ();
+		ListNodeStack<BinaryTreeNode<E>> stack = new ListNodeStack<BinaryTreeNode<E>> ();
 		stack.push(N);
 		BinaryTreeNode<E> prev = null;
 		
@@ -217,7 +217,7 @@ public class BinaryTree<E>
 	
 	public int depthStack(BinaryTreeNode<E> N)
 	{
-		LinkedListStack<BinaryTreeNode<E>> stack = new LinkedListStack<BinaryTreeNode<E>>();
+		ListNodeStack<BinaryTreeNode<E>> stack = new ListNodeStack<BinaryTreeNode<E>>();
 		BinaryTreeNode<E> prev = null;
 		int depth = 0;
 		
@@ -251,7 +251,7 @@ public class BinaryTree<E>
 	public int countLeaveNode(BinaryTreeNode<E> N)
 	{
 		int count = 0;
-		LinkedListStack<BinaryTreeNode<E>> stack = new LinkedListStack<BinaryTreeNode<E>> ();
+		ListNodeStack<BinaryTreeNode<E>> stack = new ListNodeStack<BinaryTreeNode<E>> ();
 		
 		if(N != null)
 			stack.push(N);
@@ -273,7 +273,7 @@ public class BinaryTree<E>
 	public int countParentNode(BinaryTreeNode<E> N)
 	{
 		int count = 0;
-		LinkedListStack<BinaryTreeNode<E>> stack = new LinkedListStack<BinaryTreeNode<E>> ();
+		ListNodeStack<BinaryTreeNode<E>> stack = new ListNodeStack<BinaryTreeNode<E>> ();
 		
 		if(N != null)
 			stack.push(N);
@@ -295,7 +295,7 @@ public class BinaryTree<E>
 	public int countHalfNode(BinaryTreeNode<E> N)
 	{
 		int count = 0;
-		LinkedListStack<BinaryTreeNode<E>> stack = new LinkedListStack<BinaryTreeNode<E>> ();
+		ListNodeStack<BinaryTreeNode<E>> stack = new ListNodeStack<BinaryTreeNode<E>> ();
 		
 		if(N != null)
 			stack.push(N);

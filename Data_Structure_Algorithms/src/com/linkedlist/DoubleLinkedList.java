@@ -1,3 +1,8 @@
+/**
+ * @author kaustavmanna
+ *
+ */
+
 package com.linkedlist;
 
 public class DoubleLinkedList<E>

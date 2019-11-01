@@ -1,9 +1,10 @@
-package com.linkedlist;
-
 /**
  * @author kaustavmanna
  *
  */
+
+package com.linkedlist;
+
 public class CircularSingleLinkedList<E>
 {
 	private SingleListNode<E> head;

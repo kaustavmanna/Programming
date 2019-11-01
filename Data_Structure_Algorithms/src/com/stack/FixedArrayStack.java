@@ -1,9 +1,14 @@
+/**
+ * @author kaustavmanna
+ *
+ */
+
 package com.stack;
 
 public class FixedArrayStack
 {
-	int stack[];
-	int top;
+	private int stack[];
+	private int top;
 	
 	public FixedArrayStack(int capacity)
 	{

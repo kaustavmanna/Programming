@@ -1,10 +1,15 @@
+/**
+ * @author kaustavmanna
+ *
+ */
+
 package com.stack;
 
-import java.util.*;
+import java.util.ArrayList;
 
 public class ArrayListStack<E> implements Stack<E>
 {
-	List<E> stack;
+	private ArrayList<E> stack;
 	
 	public ArrayListStack()
 	{

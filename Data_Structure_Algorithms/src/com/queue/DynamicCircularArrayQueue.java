@@ -1,9 +1,14 @@
+/**
+ * @author kaustavmanna
+ *
+ */
+
 package com.queue;
 
 public class DynamicCircularArrayQueue
 {
-	int front, rear;
-	int queue[];
+	private int front, rear;
+	private int queue[];
 	
 	public DynamicCircularArrayQueue(int capacity)
 	{

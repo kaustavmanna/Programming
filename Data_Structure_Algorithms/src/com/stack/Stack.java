@@ -1,12 +1,10 @@
 /**
- * 
- */
-package com.stack;
-
-/**
  * @author kaustavmanna
  *
  */
+
+package com.stack;
+
 public interface Stack<E>
 {
 	public E peek();
