@@ -1,10 +1,12 @@
-package com.heap;
-
-import com.tree.BinaryTreeNode;
 /**
  * @author kaustavmanna
  *
  */
+
+package com.heap;
+
+import com.tree.BinaryTreeNode;
+
 public class MaxHeap<E> implements Heap<E>
 {
 	private BinaryTreeNode<E> root;

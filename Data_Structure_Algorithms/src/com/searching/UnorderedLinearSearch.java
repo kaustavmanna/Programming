@@ -1,9 +1,10 @@
-package com.searching;
-
 /**
  * @author kaustavmanna
  *
  */
+
+package com.searching;
+
 public class UnorderedLinearSearch
 {
 	public static int search(int arr[], int element)

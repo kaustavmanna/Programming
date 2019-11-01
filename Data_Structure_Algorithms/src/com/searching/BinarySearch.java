@@ -1,9 +1,10 @@
-package com.searching;
-
 /**
  * @author kaustavmanna
  *
  */
+
+package com.searching;
+
 public class BinarySearch
 {
 	public static int iterativesearch(int arr[], int element)

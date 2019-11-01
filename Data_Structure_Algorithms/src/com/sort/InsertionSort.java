@@ -1,9 +1,10 @@
-package com.sort;
-
 /**
  * @author kaustavmanna
  *
  */
+
+package com.sort;
+
 public class InsertionSort
 {
 	public static void sort(int arr[], SortOrder order)

@@ -1,12 +1,11 @@
 /**
- * 
- */
-package com.graph;
-
-/**
  * @author kaustavmanna
  *
  */
-public class Graph {
+
+package com.graph;
+
+public class Graph
+{
 
 }

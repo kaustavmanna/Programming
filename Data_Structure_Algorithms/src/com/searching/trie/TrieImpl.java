@@ -1,9 +1,10 @@
-package com.searching.trie;
-
 /**
  * @author kaustavmanna
  *
  */
+
+package com.searching.trie;
+
 public class TrieImpl
 {
 	public static void main(String[] args)

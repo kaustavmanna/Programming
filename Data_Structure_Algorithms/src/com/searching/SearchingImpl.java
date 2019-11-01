@@ -1,9 +1,10 @@
-package com.searching;
-
 /**
  * @author kaustavmanna
  *
  */
+
+package com.searching;
+
 public class SearchingImpl
 {
 	public static void main(String[] args)

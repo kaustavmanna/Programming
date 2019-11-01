@@ -1,3 +1,8 @@
+/**
+ * @author kaustavmanna
+ *
+ */
+
 package com.searching.trie;
 
 import java.util.*;

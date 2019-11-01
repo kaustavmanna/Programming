@@ -1,9 +1,10 @@
-package com.sort;
-
 /**
  * @author kaustavmanna
  *
  */
+
+package com.sort;
+
 public class CountingSort
 {
 	public static int[] sort(int arr[], int low, int high, SortOrder order)

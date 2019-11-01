@@ -1,11 +1,12 @@
-package com.searching.trie;
-
-import java.util.LinkedList;
-
 /**
  * @author kaustavmanna
  *
  */
+
+package com.searching.trie;
+
+import java.util.LinkedList;
+
 public class Trie
 {
 	private TrieNode root;

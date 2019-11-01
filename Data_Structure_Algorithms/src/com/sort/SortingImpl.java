@@ -1,9 +1,10 @@
-package com.sort;
-
 /**
  * @author kaustavmanna
  *
  */
+
+package com.sort;
+
 public class SortingImpl
 {
 	public static void main(String[] args)
