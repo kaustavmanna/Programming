@@ -8,21 +8,20 @@ package com.queue;
 public class DynamicCircularArrayQueue
 {
 	private int front, rear;
-	private int queue[];
+	private Integer queue[];
 	
 	public DynamicCircularArrayQueue(int capacity)
 	{
-		queue = new int[capacity];
+		queue = new Integer[capacity];
 		front = 0;
 		rear = 0;
 	}
 	
-	public void enQueue(int data)
+	public void enQueue(Integer data)
 	{
 		if((rear == queue.length - 1 && front == 0) || (rear + 1) == front)
 		{
-			int newqueue[] = new int[queue.length << 1];
-			//System.arraycopy(queue, 0, newqueue, 0, queue.length);
+			Integer newqueue[] = new Integer[queue.length << 1];
 			for(int i = 0; i < queue.length; i++)
 				newqueue[i] = queue[i];
 			queue = newqueue;
@@ -38,12 +37,12 @@ public class DynamicCircularArrayQueue
 			queue[++rear] = data;
 	}
 	
-	public int deQueue()
+	public Integer deQueue()
 	{
 		if(isEmptyQueue())
 		{
 			System.out.println("Empty Queue");
-			return -1;
+			return null;
 		}
 		else if(front == queue.length - 1)
 		{
@@ -56,12 +55,12 @@ public class DynamicCircularArrayQueue
 		}
 	}
 	
-	public int front()
+	public Integer front()
 	{
 		if(isEmptyQueue())
 		{
 			System.out.println("Empty Queue");
-			return -1;
+			return null;
 		}
 		else
 			return queue[front];

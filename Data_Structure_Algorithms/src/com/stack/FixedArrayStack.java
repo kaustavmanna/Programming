@@ -7,27 +7,27 @@ package com.stack;
 
 public class FixedArrayStack
 {
-	private int stack[];
+	private Integer stack[];
 	private int top;
 	
 	public FixedArrayStack(int capacity)
 	{
-		stack = new int[capacity];
+		stack = new Integer[capacity];
 		top = -1;
 	}
 	
-	public int peek()
+	public Integer peek()
 	{
 		if(top != -1)		
 			return stack[top];
 		else
 		{
 			System.out.println("Empty Stack");
-			return -1;
+			return null;
 		}
 	}
 	
-	public void push(int data)
+	public void push(Integer data)
 	{
 		if(top == (stack.length - 1))
 			System.out.println("Stack Overflow");
@@ -38,7 +38,7 @@ public class FixedArrayStack
 		}
 	}
 	
-	public int pop()
+	public Integer pop()
 	{
 		if(top != -1)
 		{
@@ -48,7 +48,7 @@ public class FixedArrayStack
 		else
 		{
 			System.out.println("Empty Stack");
-			return -1;
+			return null;
 		}
 	}
 	

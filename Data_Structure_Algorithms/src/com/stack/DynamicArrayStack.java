@@ -7,32 +7,32 @@ package com.stack;
 
 public class DynamicArrayStack
 {
-	private int stack[];
+	private Integer stack[];
 	private int top;
 	
 	public DynamicArrayStack(int capacity)
 	{
-		stack = new int[capacity];
+		stack = new Integer[capacity];
 		top = -1;
 	}
 	
-	public int peek()
+	public Integer peek()
 	{
 		if(top != -1)		
 			return stack[top];
 		else
 		{
 			System.out.println("Empty Stack");
-			return -1;
+			return null;
 		}
 	}
 	
-	public void push(int data)
+	public void push(Integer data)
 	{
 		if(top == (stack.length - 1))
 		{
-			int newstack[] = new int[stack.length<<1];
-			//System.arraycopy(stack, 0, newstack, 0, stack.length);
+			Integer newstack[] = new Integer[stack.length<<1];
+			
 			for(int i = 0; i < stack.length; i++)
 				newstack[i] = stack[i];
 			stack = newstack;
@@ -42,7 +42,7 @@ public class DynamicArrayStack
 			stack[++top] = data;
 	}
 	
-	public int pop()
+	public Integer pop()
 	{
 		if(top != -1)
 		{
@@ -52,7 +52,7 @@ public class DynamicArrayStack
 		else
 		{
 			System.out.println("Empty Stack");
-			return -1;
+			return null;
 		}
 	}
 	

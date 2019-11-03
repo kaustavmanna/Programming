@@ -5,12 +5,10 @@
 
 package com.heap;
 
-import com.tree.BinaryTreeNode;
-
-public interface Heap<E>
+public interface Heap
 {
-	public E getTop();
-	public BinaryTreeNode<E> removeTop();
-	public void insert(E data);
-	public void delete(E data);
+	public boolean isEmpty();
+	public Integer getTop();
+	public void insert(Integer data);
+	public Integer removeTop();
 }

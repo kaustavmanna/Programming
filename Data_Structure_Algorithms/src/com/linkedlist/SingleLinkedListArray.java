@@ -7,12 +7,12 @@ package com.linkedlist;
 
 public class SingleLinkedListArray
 {
-	private int list[];
-	private int listsize;
+	private Integer list[];
+	private Integer listsize;
 	
 	public SingleLinkedListArray ()
 	{
-		list = new int[1];
+		list = new Integer[1];
 		listsize = 0;
 	}
 	
@@ -30,10 +30,10 @@ public class SingleLinkedListArray
 	}
 	
 	/*Inserting Value At The End*/
-	public void insertNode(int data)
+	public void insertNode(Integer data)
 	{
 		if(listsize == list.length)
-			list = listsizeincrease(list);
+			increasesize();
 			
 		list[listsize] = data;
 		listsize++;
@@ -41,68 +41,38 @@ public class SingleLinkedListArray
 		System.out.println(data + " inserted in the list successfully!");
 	}
 	
-	/*Inserting value At Mentioned Position*/
-	public void insertPosition(int position, int data)
-	{
-		if(position > listsize)
-			System.out.println("Invalid position mentioned!");
-		else
-		{
-			if(listsize == list.length)
-				list = listsizeincrease(list);
-			
-			for(int i = listsize - 1; i >= position; i--)
-			{
-				
-			}
-		}
-	}
-	
-	public void delete(int data)
+	public void delete(Integer data)
 	{
 		if (listsize == 0)
 			System.out.println("List is empty!");
 		else
 		{
-			int index = searchindex(data);
-			if( index == -1)
+			int i = 0;
+			while(i < listsize)
+			{
+				if(list[i] == data)
+					break;
+				i++;
+			}
+			
+			if(i == listsize)
 				System.out.println("Requested element does not exist in the list!");
 			else
 			{
-				for(int i = index; i < listsize-1; i++)
-					list[i] = list[i+1]; 
+				for(int j = i; j < listsize - 1; j++)
+					list[j] = list[j + 1]; 
 				listsize--;
 				
 				System.out.println(data + " deleted from the list successfully!");
 			}
 		}
-	}
-	
-	public void search(int data)
+	}		
+
+	private void increasesize()
 	{
-		if(searchindex(data) != -1)
-			System.out.println(data + " exists in the list!");
-		else
-			System.out.println(data + " does not exist in the list!");
-	}
-	
-	private int searchindex(int data)
-	{
-		for(int i = 0; i < listsize; i++)
-		{
-			if (list[i] == data)
-				return i;
-		}
-		
-		return -1;
-	}
-	
-	private int[] listsizeincrease(int arr[])
-	{
-		int temp[] = new int[arr.length * 2];
-		for(int i = 0; i < arr.length; i++)
-			temp[i] = arr[i];
-		arr = temp;
-		return arr;
+		Integer temp[] = new Integer[list.length * 2];
+		for(int i = 0; i < list.length; i++)
+			temp[i] = list[i];
+		list = temp;
 	}
 }
