@@ -5,17 +5,17 @@
 
 package com.heap;
 
-public class MaxHeap implements Heap
+public class MinHeap implements Heap
 {
-	private Integer maxheap[];
-	private Integer heapsize;
+	private Integer minheap[];
+	private int heapsize;
 	
-	public MaxHeap()
+	public MinHeap()
 	{
-		maxheap = new Integer[1];
+		minheap = new Integer[1];
 		heapsize = 0;
 	}
-	
+
 	@Override
 	public boolean isEmpty()
 	{
@@ -24,23 +24,26 @@ public class MaxHeap implements Heap
 		else
 			return false;
 	}
-	
+
 	@Override
 	public Integer getTop()
 	{
-		return maxheap[0];
+		if(heapsize == 0)
+			return null;
+		else
+			return minheap[0];
 	}
 
 	@Override
 	public void insert(Integer data)
 	{
-		if(heapsize == maxheap.length)
+		if(heapsize == minheap.length)
 			increasesize();
 		
-		maxheap[heapsize++] = data;
-		heapifyup(heapsize-1);
+		minheap[heapsize++] = data;
+		heapifyup(heapsize-1);		
 	}
-	
+
 	@Override
 	public Integer removeTop()
 	{
@@ -48,9 +51,10 @@ public class MaxHeap implements Heap
 			return null;
 		else
 		{
-			Integer removed = maxheap[0];
+			Integer removed = minheap[0];
 			heapsize--;
-			maxheap[0] = maxheap[heapsize];
+			minheap[0] = minheap[heapsize];
+			
 			if(heapsize != 0)
 				heapifydown(0);
 			return removed;
@@ -59,39 +63,34 @@ public class MaxHeap implements Heap
 	
 	private void heapifyup(int position)
 	{
-		Integer temp = maxheap[position];
+		Integer temp = minheap[position];
 		
-		while(position > 0 && temp > maxheap[parent(position)])
+		while(position > 0 && temp < minheap[parent(position)])
 		{
-			maxheap[position] = maxheap[parent(position)];
+			minheap[position] = minheap[parent(position)];
 			position = parent(position);
 		}
-		maxheap[position] = temp;
+		minheap[position] = temp;
 	}
 	
 	private void heapifydown(int position)
 	{
 		int left = leftChild(position);
 		int right = rightChild(position);
-		int max = position;
+		int min = position;
 		
-		if(left != -1 && maxheap[left] > maxheap[position])
-			max = left;
-		if(right != -1 && maxheap[right] > maxheap[max])
-			max = right;
-		if(max != position)
+		if(left != -1 && minheap[position] > minheap[left])
+			min = left;
+		if(right != -1 && minheap[min] > minheap[right])
+			min = right;
+			
+		if(min != position)
 		{
-			swap(position, max);
-			heapifydown(max);
+			Integer temp = minheap[position];
+			minheap[position] = minheap[min];
+			minheap[min] = temp;
+			heapifydown(min);
 		}
-	}
-	
-	private void increasesize()
-	{
-		Integer temp[] = new Integer[maxheap.length * 2];
-		for(int i = 0; i < maxheap.length; i++)
-			temp[i] = maxheap[i];
-		maxheap = temp;
 	}
 	
 	private int parent(int position)
@@ -117,10 +116,11 @@ public class MaxHeap implements Heap
 			return right;
 	}
 	
-	private void swap(int source, int target)
+	private void increasesize()
 	{
-		Integer temp = maxheap[source];
-		maxheap[source] = maxheap[target];
-		maxheap[target] = temp;
+		Integer temp[] = new Integer[minheap.length<<1];
+		for(int i = 0; i < minheap.length; i++)
+			temp[i] = minheap[i];
+		minheap = temp;
 	}
 }
