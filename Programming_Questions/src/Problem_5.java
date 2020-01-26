@@ -3,6 +3,9 @@
  *
  */
 
+/* In this problem, you need to sort Students according to CGPA, Name and then ID wise
+ */
+
 import java.util.*;
 
 class Student
