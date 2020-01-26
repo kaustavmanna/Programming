@@ -14,7 +14,5 @@ public class GraphImpl
 		graph.addEdge(2, 3);
 		graph.addEdge(2, 4);
 		graph.addEdge(1, 5);
-		
-		System.out.println(graph.isEdge(2, 1));
 	}
 }
