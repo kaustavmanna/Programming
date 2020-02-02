@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ProjectModuleManager">
+    <modules>
+      <module fileurl="file://$PROJECT_DIR$/ATM_Machine/ATM_Machine.iml" filepath="$PROJECT_DIR$/ATM_Machine/ATM_Machine.iml" />
+      <module fileurl="file://$PROJECT_DIR$/Data_Structure_Algorithms/Data_Structure_Algorithms.iml" filepath="$PROJECT_DIR$/Data_Structure_Algorithms/Data_Structure_Algorithms.iml" />
+      <module fileurl="file://$PROJECT_DIR$/Design_Patterns/Design_Patterns.iml" filepath="$PROJECT_DIR$/Design_Patterns/Design_Patterns.iml" />
+      <module fileurl="file://$PROJECT_DIR$/Library_Management_System_Command/Library_Management_System_Command.iml" filepath="$PROJECT_DIR$/Library_Management_System_Command/Library_Management_System_Command.iml" />
+      <module fileurl="file://$PROJECT_DIR$/Programming_Questions/Programming_Questions.iml" filepath="$PROJECT_DIR$/Programming_Questions/Programming_Questions.iml" />
+      <module fileurl="file://$PROJECT_DIR$/Traffic_Light/Traffic_Light.iml" filepath="$PROJECT_DIR$/Traffic_Light/Traffic_Light.iml" />
+    </modules>
+  </component>
+</project>
