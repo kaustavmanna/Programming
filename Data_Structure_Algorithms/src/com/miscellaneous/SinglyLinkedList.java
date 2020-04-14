@@ -1,3 +1,5 @@
+package com.miscellaneous;
+
 import java.util.Iterator;
 import java.util.Scanner;
 import java.util.NoSuchElementException;
@@ -21,7 +23,7 @@ public class SinglyLinkedList<T> implements Iterable<T>
     Entry<T> head, tail;
     int size;
 
-    // Constructor for SinglyLinkedList
+    // Constructor for com.miscellaneous.SinglyLinkedList
     public SinglyLinkedList()
     {
         head = new Entry<>(null, null);

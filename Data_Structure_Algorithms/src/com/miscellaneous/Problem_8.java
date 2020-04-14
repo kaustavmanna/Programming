@@ -1,4 +1,4 @@
-/*Problem Statement - divide a number in two numbers without the digit 4 and sum of the number will be same as first number*/
+package com.miscellaneous;/*Problem Statement - divide a number in two numbers without the digit 4 and sum of the number will be same as first number*/
 
 import java.util.*;
 

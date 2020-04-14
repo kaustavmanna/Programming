@@ -1,3 +1,5 @@
+package com.miscellaneous;
+
 import java.util.NoSuchElementException;
 import java.util.Scanner;
 

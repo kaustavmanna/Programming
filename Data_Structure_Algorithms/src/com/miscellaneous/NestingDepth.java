@@ -1,3 +1,5 @@
+package com.miscellaneous;
+
 import java.util.Scanner;
 
 public class NestingDepth
