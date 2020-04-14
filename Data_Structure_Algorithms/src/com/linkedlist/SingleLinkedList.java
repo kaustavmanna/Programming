@@ -7,7 +7,7 @@ package com.linkedlist;
 
 public class SingleLinkedList<E>
 {
-	private SingleListNode<E> head;
+	protected SingleListNode<E> head;
 	
 	public SingleLinkedList()
 	{

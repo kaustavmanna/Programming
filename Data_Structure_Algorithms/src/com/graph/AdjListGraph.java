@@ -13,8 +13,7 @@ public class AdjListGraph implements Graph
 {
 	private LinkedList<Integer> adjlist[];
 	private int vertex;
-	
-	@SuppressWarnings("unchecked")
+
 	public AdjListGraph(int vertex)
 	{
 		this.vertex = vertex;
@@ -51,32 +50,59 @@ public class AdjListGraph implements Graph
 		else
 			return false;
 	}
-	
+
+	@Override
 	public void BFS(int v)
 	{
 		boolean visited[] = new boolean[vertex];
+		for(int i = 0; i < vertex; i++)
+			visited[i] = false;
+
 		Queue<Integer> queue = new LinkedList<Integer>();
-		
-		visited[v] = true;
 		queue.add(v);
+		visited[v-1] = true;
 		
-		System.out.println("BFS traversal of the tree is:");
+		System.out.println("BFS traversal of the graph is:");
 		
 		while(queue.size() != 0)
 		{
 			v = queue.poll();
 			System.out.print(v + " ");
-			Iterator<Integer> i = adjlist[v].iterator();
-			
+			Iterator<Integer> i = adjlist[v-1].iterator();
 			while(i.hasNext())
 			{
 				int n = i.next();
-				if(!visited[n])
+				if(!visited[n-1])
 				{
-					visited[n] = true;
+					visited[n-1] = true;
 					queue.add(n);
 				}
 			}
+		}
+		System.out.println();
+	}
+
+	@Override
+	public void DFS(int v)
+	{
+		System.out.println("DFS Traversal of the graph is:");
+		boolean visited[] = new boolean[vertex];
+		for(int i = 0; i < vertex; i++)
+			visited[i] = false;
+		DFSutil(visited, v);
+		System.out.println();
+	}
+
+	private void DFSutil(boolean visited[], int v)
+	{
+		visited[v-1] = true;
+		System.out.print(v + " ");
+		Iterator<Integer> itr = adjlist[v-1].iterator();
+		while(itr.hasNext())
+		{
+			int n = itr.next();
+			if(!visited[n])
+				DFSutil(visited, n);
 		}
 	}
 }

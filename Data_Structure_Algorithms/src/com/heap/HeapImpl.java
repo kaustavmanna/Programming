@@ -10,7 +10,7 @@ public class HeapImpl
 	public static void main(String args[])
 	{
 		//Heap heap = new MaxHeap();
-		Heap heap = new MinHeap();
+		Heap heap = new MaxHeap();
 		
 		heap.insert(19);
 		heap.insert(87);

@@ -14,10 +14,8 @@ public class HeapSort
 		if(order == SortOrder.Ascending)
 		{
 			Heap heap = new MinHeap();
-			
 			for(int i = 0; i < arr.length; i++)
 				heap.insert(arr[i]);
-			
 			for(int i = 0; i < arr.length; i++)
 				arr[i] = heap.removeTop();
 		}
@@ -25,10 +23,8 @@ public class HeapSort
 		else
 		{
 			Heap heap = new MaxHeap();
-			
 			for(int i = 0; i < arr.length; i++)
 				heap.insert(arr[i]);
-			
 			for(int i = 0; i < arr.length; i++)
 				arr[i] = heap.removeTop();
 		}
