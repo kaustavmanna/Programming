@@ -36,8 +36,6 @@ public class SingleLinkedList<E>
 			System.out.println("The List is Empty!");
 		else
 		{
-			System.out.println("Current List is: ");
-			
 			for(SingleListNode<E> N = head; N != null; N = N.getNext())
 				System.out.print(N.getData() + " ");
 			System.out.println();
@@ -53,12 +51,10 @@ public class SingleLinkedList<E>
 			head = node;
 		else
 		{
-			while(N.getNext() != null)
+			while (N.getNext() != null)
 				N = N.getNext();
 			N.setNext(node);
 		}
-		
-		System.out.println(data + " is successfully added in the list!");
 	}
 	
 	/*Insert At A Position*/
@@ -101,7 +97,6 @@ public class SingleLinkedList<E>
 		if(head.getData() == data)
 		{
 			head = head.getNext();
-			System.out.println(data + " is deleted from the list.");
 			return;
 		}
 		
@@ -112,7 +107,6 @@ public class SingleLinkedList<E>
 			if(N.getNext().getData() == data)
 			{
 				N.setNext(N.getNext().getNext());
-				System.out.println(data + " is deleted from the list.");
 				return;
 			}
 			N = N.getNext();

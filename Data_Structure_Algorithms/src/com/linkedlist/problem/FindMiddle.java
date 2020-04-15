@@ -5,7 +5,7 @@ package com.linkedlist.problem;
 import com.linkedlist.SingleLinkedList;
 import com.linkedlist.SingleListNode;
 
-public class Problem2<E> extends SingleLinkedList<E>
+public class FindMiddle<E> extends SingleLinkedList<E>
 {
     public SingleListNode<E> findmiddle()
     {

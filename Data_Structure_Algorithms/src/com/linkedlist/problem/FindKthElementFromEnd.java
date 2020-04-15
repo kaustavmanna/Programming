@@ -5,9 +5,9 @@ package com.linkedlist.problem;
 import com.linkedlist.SingleLinkedList;
 import com.linkedlist.SingleListNode;
 
-import java.util.Scanner;
+import java.util.LinkedList;
 
-public class Problem1<E> extends SingleLinkedList<E>
+public class FindKthElementFromEnd<E> extends SingleLinkedList<E>
 {
     public E findkthelementfromend(int k)
     {

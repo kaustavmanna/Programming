@@ -5,7 +5,7 @@ package com.linkedlist.problem;
 import com.linkedlist.SingleLinkedList;
 import com.linkedlist.SingleListNode;
 
-public class Problem3<E> extends SingleLinkedList<E>
+public class PrintReverseOrder<E> extends SingleLinkedList<E>
 {
     public void reversetraverse()
     {

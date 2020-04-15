@@ -1,6 +1,7 @@
 package com.linkedlist.problem;
 
-import java.util.Scanner;
+import com.linkedlist.SingleLinkedList;
+import com.linkedlist.SingleListNode;
 
 public class SolutionCheck
 {
@@ -10,7 +11,7 @@ public class SolutionCheck
         //System.out.print("Enter a number: ");
         //int k = in.nextInt();
 
-        Problem3<Integer> linkedList = new Problem3<Integer>();
+        ReverseLinkedList<Integer> linkedList = new ReverseLinkedList<>();
         linkedList.insertNode(10);
         linkedList.insertNode(15);
         linkedList.insertNode(5);
@@ -21,6 +22,15 @@ public class SolutionCheck
         linkedList.insertNode(16);
         linkedList.insertNode(35);
 
-        linkedList.reversetraverse();
+        System.out.println("Before Reversing:");
+        linkedList.traverse();
+
+        System.out.println("Iterative Reversal:");
+        linkedList.reverseIterative();
+        linkedList.traverse();
+
+        System.out.println("Recursive Reversal:");
+        linkedList.reverseRecursive();
+        linkedList.traverse();
     }
 }
