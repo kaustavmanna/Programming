@@ -11,26 +11,27 @@ public class SolutionCheck
         //System.out.print("Enter a number: ");
         //int k = in.nextInt();
 
-        ReverseLinkedList<Integer> linkedList = new ReverseLinkedList<>();
-        linkedList.insertNode(10);
-        linkedList.insertNode(15);
-        linkedList.insertNode(5);
-        linkedList.insertNode(20);
-        linkedList.insertNode(30);
-        linkedList.insertNode(25);
-        linkedList.insertNode(26);
-        linkedList.insertNode(16);
-        linkedList.insertNode(35);
+        SplitCircularLinkedList<Integer> circularLinkedList = new SplitCircularLinkedList<>();
+        circularLinkedList.insertNode(1);
+        circularLinkedList.insertNode(2);
+        circularLinkedList.insertNode(3);
+        circularLinkedList.insertNode(4);
+        circularLinkedList.insertNode(5);
+        circularLinkedList.insertNode(6);
 
-        System.out.println("Before Reversing:");
-        linkedList.traverse();
+        circularLinkedList.traverse();
 
-        System.out.println("Iterative Reversal:");
-        linkedList.reverseIterative();
-        linkedList.traverse();
+        SingleListNode<Integer> list2 = circularLinkedList.splitlist();
 
-        System.out.println("Recursive Reversal:");
-        linkedList.reverseRecursive();
-        linkedList.traverse();
+        System.out.println("First List: ");
+        circularLinkedList.traverse();
+
+        System.out.println("Second List: ");
+        SingleListNode<Integer> trav = list2;
+        do
+        {
+            System.out.print(trav.getData() + " ");
+            trav = trav.getNext();
+        }while(trav != list2);
     }
 }

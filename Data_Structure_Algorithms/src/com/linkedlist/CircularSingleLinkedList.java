@@ -7,7 +7,7 @@ package com.linkedlist;
 
 public class CircularSingleLinkedList<E>
 {
-	private SingleListNode<E> head;
+	protected SingleListNode<E> head;
 	
 	public CircularSingleLinkedList()
 	{

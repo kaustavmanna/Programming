@@ -2,15 +2,14 @@
 
 package com.linkedlist.problem;
 
-import com.linkedlist.SingleLinkedList;
 import com.linkedlist.SingleListNode;
 
-public class FindMiddle<E> extends SingleLinkedList<E>
+public class FindMiddle<E>
 {
-    public SingleListNode<E> findmiddle()
+    public SingleListNode<E> findmiddle(SingleListNode<E> head)
     {
-        SingleListNode<E> middle = super.head;
-        SingleListNode<E> trav = super.head;
+        SingleListNode<E> middle = head;
+        SingleListNode<E> trav = head;
 
         while (trav != null && trav.getNext() != null && trav.getNext().getNext() != null)
         {

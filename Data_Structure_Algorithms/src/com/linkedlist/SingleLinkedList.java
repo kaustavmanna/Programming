@@ -29,6 +29,18 @@ public class SingleLinkedList<E>
 		}
 		return count;
 	}
+
+	public E getData(int position)
+	{
+		if(position < 0 || position > (size() - 1))
+			return null;
+
+		SingleListNode<E> trav = head;
+		for(int i = 1; i < position; i++)
+			trav = trav.getNext();
+
+		return trav.getData();
+	}
 	
 	public void traverse()
 	{

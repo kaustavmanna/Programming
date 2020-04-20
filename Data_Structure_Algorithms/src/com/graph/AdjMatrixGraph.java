@@ -5,7 +5,6 @@
 
 package com.graph;
 
-import java.util.Iterator;
 import java.util.LinkedList;
 import java.util.Queue;
 
@@ -68,7 +67,7 @@ public class AdjMatrixGraph implements Graph
 			System.out.print(v + " ");
 			for(int i = 0; i < vertex; i++)
 			{
-				if(visited[i] == false && adjmatrix[v-1][i] == true)
+				if(!visited[i] && adjmatrix[v-1][i])
 				{
 					visited[i] = true;
 					queue.add(i+1);
